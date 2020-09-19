@@ -5,16 +5,20 @@ const totalTime = 7500;
 const breatheTime = (totalTime / 5) * 2;
 const holdTime = totalTime / 5;
 
-function breatheAnimation() {
-    console.log('Breathe In!');
+breathAnimation();
+
+function breathAnimation() {
+  text.innerHTML = 'Breathe In!';
+  container.className = 'container grow';
+
+  setTimeout(() => {
+    text.innerText = 'Hold';
 
     setTimeout(() => {
-        console.log('Hold');
-
-        setTimeout(() => {
-            console.log('Breathe Out!')
-        }, holdTime);
-    }, breatheTime);
+      text.innerText = 'Breathe Out!';
+      container.className = 'container shrink';
+    }, holdTime);
+  }, breatheTime);
 }
 
-breatheAnimation();
+setInterval(breathAnimation, totalTime);
