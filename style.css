@@ -75,6 +75,25 @@ body {
     transform-origin: bottom center;
 }
 
+@media (max-width: 480px) {
+    .container {
+        height: 230px;
+        width: 230px;
+    }
+
+    .gradient-circle {
+        height: 250px;
+        width: 250px;
+    }
+
+    .pointer-container {
+        top: -34.5px;
+        left: 108px;
+        width: 15px;
+        height: 149px;
+    }
+}
+
 @keyframes rotate {
     from {
         transform: rotate(0deg);
